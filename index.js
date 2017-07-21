@@ -10,7 +10,7 @@ const pkg = require(path.resolve(process.cwd(), 'package.json'))
 const klaw = require('klaw')
 
 // 合法文件
-const rValid = /(\.js|\.css|\.png|\.jpg|\.gif|\.jpeg|\.svg)$/
+const rValid = pkg.release && pkg.valid || /(\.js|\.css|\.png|\.jpg|\.gif|\.jpeg|\.svg)$/
 
 // 输出文件后缀
 const POSTFIX = '.zip'
